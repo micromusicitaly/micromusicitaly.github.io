@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ if .Params.image }}
+<img src="{{ .Params.image }}" alt="{{ .Title }}">
+{{ end }}
+
+<h1 style="margin-bottom: 0px;">{{ .Title }}</h1>
+{{ if .Params.from }}
+{{ .Params.from }}
+{{ end }}
+
+
+{{ .Content }}
+
+{{ partial "social-icons.html" (dict "Context" . "Label" "Contatti: ") }}
+
+{{ end }} 

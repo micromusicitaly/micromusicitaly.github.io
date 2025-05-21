@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{ .Content }}
+  <section class="posts-grid">
+    {{ range sort .Pages "Title" }}
+      <article class="post">
+        {{ if .Params.image }}
+          <img src="{{ .Params.image }}" alt="{{ .Title }}">
+        {{ end }}
+        <h2 style="margin-bottom: 0px;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ if .Params.from }}
+          <span class="event-location">Da {{ .Params.from }}</span>
+        {{ end }}
+        <p>{{ .Summary | truncate 200 }}</p>
+        {{ $summaryLen := len .Summary }}
+        {{ if gt $summaryLen 205 }}
+        <p><a href="{{ .RelPermalink }}">Leggi di più</a></p>
+        {{ end }}
+
+        {{ partial "social-icons.html" (dict "Context" .) }}
+      </article>
+    {{ end }}
+  </section>
+{{ end }}

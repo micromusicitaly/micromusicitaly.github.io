@@ -1,0 +1,19 @@
+<header class="site-header">
+    
+    <!-- load css -->
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+    <!-- load js -->
+    <script src="{{ "js/main.js" | relURL }}"></script>
+    <div class="scanline"></div>
+    <!-- load fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <h1 id="typewriter-title" data-title="{{ .Site.Title }}" style="text-align:center;margin:2rem 0;display:inline-block;min-width:13ch"></h1>
+
+    <nav class="main-nav">
+    {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+    </nav>
+
+</header>

@@ -1,0 +1,22 @@
+{{ define "main" }}
+    <article>
+        <div class="post-image">
+            {{ with .Params.image }}
+            <center>
+                <img src="{{ . }}" alt="{{ $.Title }}" class="post-thumb">
+            </center>
+            {{ end }}
+        </div>
+        <h1>{{ .Title }}</h1>
+        {{ if not .Params.hide_meta }}
+        <div class="post-meta">
+            <div style="color:#666;font-size:0.9em">
+                {{ .Date.Format "2 January 2006" }} {{ if .Params.author }} by {{ .Params.author }}{{ end }}
+            </div>
+        </div>
+{{ end }}
+        <div>
+            {{ .Content }}
+        </div>
+    </article>
+{{ end }}

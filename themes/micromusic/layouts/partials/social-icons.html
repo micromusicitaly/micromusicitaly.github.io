@@ -1,0 +1,19 @@
+{{- $ctx := .Context -}}
+{{- if $ctx.Params.contacts }}
+  {{- $label := .Label | default "" -}}
+  <div class="social-icons">
+    {{- if $label }}
+      <span>{{ $label }}</span>
+    {{- end }}
+    {{- range $ctx.Params.contacts }}
+      {{- $name := lower (replace .name " " "") }}
+      {{- if eq $name "email" }}
+        <a href="mailto:{{ .link }}" target="_blank" rel="noopener noreferrer" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      {{- else if eq $name "website" }}
+        <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" title="Website"><i class="fa-solid fa-globe"></i></a>
+      {{- else }}
+        <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" title="{{ .name }}"><i class="fa-brands fa-{{ $name }}"></i></a>
+      {{- end }}
+    {{- end }}
+  </div>
+{{- end }}

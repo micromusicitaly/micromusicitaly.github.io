@@ -1,0 +1,67 @@
+{{ define "main" }}
+
+{{ .Content }}
+
+<h2>📅 Prossimi Eventi</h2>
+{{ $now := now }}
+{{ $prossimi := where (where .Site.RegularPages "Section" "eventi") "Params.date_event" "!=" nil }}
+{{ $prossimi = where $prossimi "Params.date_event" "ge" ($now.Format "2006-01-02") }}
+{{ $prossimi = sort $prossimi "Params.date_event" "asc" }}
+
+<div class="posts-grid">
+  {{ if gt (len $prossimi) 0 }}
+    {{ range first 3 $prossimi }}
+      {{ .Render "summary" }}
+    {{ end }}
+  {{ else }}
+    <div class="no-events-message">
+      Nessun evento in programma al momento. Torna a trovarci!
+    </div>
+  {{ end }}
+
+</div>
+
+<a href="/eventi" class="btn btn-primary">Vedi tutti gli eventi passati</a>
+
+<!-- {{ $highlighted := where .Site.RegularPages "Params.highlight" true }}
+{{ $first := index $highlighted 0 }}
+{{ $rest := after 1 $highlighted }}
+
+<div class="home-sections">
+  <section class="highlighted-posts">
+    <h2>📌 In evidenza</h2>
+    
+  {{ if $first }}
+    <div class="highlight-box" style="margin-bottom: 1rem;">
+      {{ $first.Render "summary" }}
+    </div>
+  {{ end }}
+
+  {{ if gt (len $rest) 0 }}
+    <div class="posts-grid">
+      {{ range $rest }}
+        <div class="post-card">
+          {{ .Render "summary" }}
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+  </section> -->
+
+  <section class="recent-posts-grid">
+    <h2>🆕 Ultimi articoli</h2>
+    <div class="posts-grid">
+      {{ range first 6 (where .Site.RegularPages "Section" "blog") }}
+        {{ .Render "summary" }}
+      {{ end }}
+    </div>
+</section>
+
+
+<!-- center div -->
+ <div style="text-align: center; margin-top: 2rem;">
+<a href="/blog" class="btn btn-primary">Leggi tutti gli articoli</a>
+</div>
+<!-- 
+</div> -->
+{{ end }}

@@ -1,0 +1,51 @@
+{{ define "main" }}
+<main>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  {{/* Raccogli tutti gli anni dai tag degli eventi */}}
+  {{ $years := slice }}
+  {{ range .Pages }}
+    {{ range .Params.tags }}
+      {{ if (findRE `^\d{4}$` .) }}
+        {{ if not (in $years .) }}{{ $years = $years | append . }}{{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $years = sort $years | collections.Reverse }}
+
+  {{ $now := now }}
+  {{ $currentYear := $now.Format "2006" }}
+
+  {{ range $years }}
+    <h2 class="event-year">{{ . }}</h2>
+
+    {{ if eq . $currentYear }}
+      <h3>Eventi in corso o futuri</h3>
+      <section class="posts-grid">
+        {{ range where (where $.Pages "Params.tags" "intersect" (slice .)) "Params.date_event" "!=" nil }}
+          {{ $eventDate := time .Params.date_event }}
+          {{ if ge $eventDate $now }}
+            {{ .Render "summary" }}
+          {{ end }}
+        {{ end }}
+      </section>
+      <h3>Eventi passati</h3>
+      <section class="posts-grid">
+        {{ range where (where $.Pages "Params.tags" "intersect" (slice .)) "Params.date_event" "!=" nil }}
+          {{ $eventDate := time .Params.date_event }}
+          {{ if lt $eventDate $now }}
+            {{ .Render "summary" }}
+          {{ end }}
+        {{ end }}
+      </section>
+    {{ else }}
+      <section class="posts-grid">
+        {{ range where (where $.Pages "Params.tags" "intersect" (slice .)) "Params.date_event" "!=" nil }}
+          {{ .Render "summary" }}
+        {{ end }}
+      </section>
+    {{ end }}
+  {{ end }}
+</main>
+{{ end }}

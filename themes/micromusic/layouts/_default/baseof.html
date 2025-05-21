@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    
+    <meta charset="utf-8">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="dark-theme crt">
+
+    <div class="crt-bg"></div>
+
+    <div id="customizer-toggle" class="customizer-toggle" style="display:none;">
+    <button class="pixel-btn pixel-toggle" onclick="showCustomizer()" title="Mostra impostazioni">⚙</button>
+    </div>
+
+    <div class="container page-wrapper">
+        {{ partial "header.html" . }}
+        <main>{{ block "main" . }}{{ end }}</main>
+        {{ partial "footer.html" . }}
+    </div>
+</body>
+</html>

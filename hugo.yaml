@@ -1,0 +1,55 @@
+baseURL: https://micromusic.github.io/
+languageCode: it-it
+title: Micromusic Italy
+theme: micromusic
+params:
+  bgcolor: '#111'
+  fgcolor: '#eee'
+  accent: '#00f6ff'
+menu:
+  main:
+  - identifier: home
+    name: Home
+    url: /
+    weight: 1
+    params:
+      icon: 🏠
+      color: '#00ff9d'
+  - identifier: chi-siamo
+    name: Chi siamo
+    url: /chi-siamo/
+    weight: 2
+    params:
+      icon: 📧
+      color: '#e0952b'
+  - identifier: blog
+    name: Blog
+    url: /blog/
+    weight: 3
+    params:
+      icon: 📰
+      color: '#4b437b'
+  - name: Eventi
+    url: /eventi/
+    weight: 3
+  - identifier: musica
+    name: Musica
+    url: /musica/
+    weight: 4
+    params:
+      icon: 🎵
+      color: '#a02d4d'
+  - identifier: contatti
+    name: Contatti
+    url: /contatti/
+    weight: 5
+    params:
+      icon: 📧
+      color: '#e0952b'
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+permalinks:
+  blog: /blog/:slug/
+  eventi: /eventi/:slug/

@@ -1,0 +1,38 @@
+<article class="post-summary">
+  {{ with .Params.image }}
+    <img src="{{ . }}" alt="Anteprima evento {{ $.Title }}" class="summary-thumb">
+  {{ end }}
+  <h3 style="margin-bottom: 0px;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <div class="post-meta">
+    {{ $de := .Params.date_event }}
+    {{ if $de }}
+      {{ $parts := split $de "-" }}
+      {{ $startRaw := printf "%s-%s-%s" (index $parts 0) (index $parts 1) (index $parts 2) }}
+      {{ $start := time $startRaw }}
+      {{ $end := "" }}
+      {{ $endRaw := "" }}
+      {{ if gt (len $parts) 3 }}
+        {{ $endRaw = printf "%s-%s-%s" (index $parts 0) (index $parts 3) (index $parts 4) (index $parts 5) }}
+        {{ $end = time $endRaw }}
+      {{ end }}
+      <time>
+        {{ if $end }}
+          Dal {{ $start.Format "2 January 2006" | lower }} al {{ $end.Format "2 January 2006" | lower }}
+        {{ else }}
+          {{ $start.Format "2 January 2006" | lower }}
+        {{ end }}
+      </time>
+    {{ else }}
+      <time>{{ .Date.Format "2 January 2006" | lower }}</time>
+    {{ end }}
+    {{ with .Params.location }}<br><span class="event-location">{{ . }}</span>{{ end }}
+    {{ if .Params.author }}<br><span class="event-author">by {{ .Params.author }}</span>{{ end }}
+  </div>
+  <p class="summary-text">
+    {{ if .Summary }}
+      {{ .Summary | truncate 120 " […]" }}
+    {{ else }}
+      {{ .Content | truncate 120 " […]" }}
+    {{ end }}
+  </p>
+</article>
