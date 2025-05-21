@@ -5,8 +5,8 @@ title: 'Itspandaonair'
 categories:
     - People
 contacts:
-    - name: 
-      link: 
+    - name: Bandcamp
+      link: https://itspandaonair.bandcamp.com/
 hide_meta: true
 image:
 from: Modena, Emilia-Romagna 
