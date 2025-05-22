@@ -5,8 +5,8 @@ title: 'Rbino'
 categories:
     - People
 contacts:
-    - name: 
-      link: 
+    - name: Soundcloud
+      link: https://soundcloud.com/rbino
 hide_meta: true
 image: 
 from: Brianza, Lombardia
