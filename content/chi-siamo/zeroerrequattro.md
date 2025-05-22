@@ -1,7 +1,7 @@
 ---
 date: '2025-05-20T20:56:26+02:00'
 draft: false
-title: '0r4'
+title: 'zeroerrequattro'
 categories:
     - People
 contacts:
