@@ -4,9 +4,11 @@ hide_meta: true
 
 # Credits
 
-Sito creato e progettato da [dag](https://dag7.it) con [Hugo](https://gohugo.io/).
+Questa avventura ha avuto come primo diario di bordo il portale 8-b.it, e la v2.0 (thx Rezna!).
 
-Questa avventura ha avuto come primo diario di bordo il portale 8-b.it v2.0 (thx Rezna!)
+Grazie a tutti coloro che si sono presi cura del progetto prima del 2025, senza il quale 8-b.it non sarebbe mai esistito.
+
+Questa versione è stata creata e progettata da [dag](https://dag7.it) con [Hugo](https://gohugo.io/).
 
 Il materiale originale è stato preso dalla wayback machine di archive.org. La pagina [Chi siamo](/chi-siamo) è stata rielaborata dai contenuti che furono e aggiornata.
 
