@@ -9,6 +9,8 @@ contacts:
       link: https://soundcloud.com/ianosnoisebox
     - name: Bandcamp
       link: https://iano.bandcamp.com/
+    - name: Facebook
+      link: https://www.facebook.com/iano8bit 
 hide_meta: true
 image: 
 from: Trento, Trentino-Alto Adige

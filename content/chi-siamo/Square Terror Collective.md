@@ -5,8 +5,8 @@ title: 'Square Terror Collective'
 categories:
     - People
 contacts:
-    - name: 
-      link: 
+    - name: Instagram
+      link: https://www.instagram.com/square_terror_collective/
 hide_meta: true
 image: 
 ---

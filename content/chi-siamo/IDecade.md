@@ -7,6 +7,8 @@ categories:
 contacts:
     - name: Bandcamp
       link: https://soundcloud.com/idecade
+    - name: Instagram
+      link: https://www.instagram.com/idecade.chiptune/
 hide_meta: true
 image: 
 ---
