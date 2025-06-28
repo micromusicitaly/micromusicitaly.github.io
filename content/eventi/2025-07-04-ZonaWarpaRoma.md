@@ -1,7 +1,7 @@
 ---
 date: "2025-06-28T09:42:04+02:00"
 draft: false
-image: /img/eventi/2025zwroma.jpg
+image: /img/eventi/2025zwroma.png
 location: Roma, Forte Prenestino
 categories:
 - eventi
