@@ -9,6 +9,8 @@ contacts:
       link: https://dag7.it/music
     - name: Soundcloud
       link: https://soundcloud.com/dag7music
+    - name: Youtube
+      link: https://www.youtube.com/@dag7music
 # image: /img/persone/dag.jpg
 from: Roma, Lazio
 ---
