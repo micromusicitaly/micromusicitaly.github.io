@@ -7,9 +7,13 @@ categories:
 contacts:
     - name: Soundcloud 
       link: https://soundcloud.com/0r4
+    - name: Bandcamp
+      link: https://0r4music.bandcamp.com
+    - name: DilatedPupilsRec
+      link: https://dilatedpupilsrec.bandcamp.com/album/dinosaurs-can-dance-dpr014
 hide_meta: true
 image: 
 from: Milano, Lombardia
 ---
 
-Baniele Diggiogero. Fa chiptune dal 2013, principalmente techno. Adora comporre mentre è in viaggio.
+0r4, all’anagrafe Zero Erre Quattro, nasce e cresce a Milano nel 2013. Suona i Gameboy e li modda pure. Compone quasi esclusivamente sulla metropolitana, visto che fermo in casa non trova ispirazione. Con 3 album e svariati concerti alle spalle, ora vive a Berlino, città con una rete di trasporto pubblico molto più estesa.
