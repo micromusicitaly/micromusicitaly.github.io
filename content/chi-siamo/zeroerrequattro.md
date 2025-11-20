@@ -9,7 +9,7 @@ contacts:
       link: https://soundcloud.com/0r4
     - name: Bandcamp
       link: https://0r4music.bandcamp.com
-    - name: DilatedPupilsRec
+    - name: Website
       link: https://dilatedpupilsrec.bandcamp.com/album/dinosaurs-can-dance-dpr014
 hide_meta: true
 image: 
