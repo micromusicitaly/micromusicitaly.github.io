@@ -8,6 +8,8 @@ Micromusic Italy è una community di artisti provenienti da tutta Italia che si 
 
 Ogni anno, sin dal 2015, viene organizzata la Nekopolpo Compilation, una raccolta di brani inediti e non, di artisti emergenti e affermati della scena italiana.
 
+{{< bandcamp "https://bandcamp.com/EmbeddedPlayer/album=1850500337/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/" >}}
+
 <iframe width="100%" height="330" scrolling="no" frameborder="no" src="https://stereo.kenobit.it/embed.html?&amp;type=album&amp;id=182"></iframe>
 
 {{< bandcamp "https://bandcamp.com/EmbeddedPlayer/album=1033172704/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/" >}}
